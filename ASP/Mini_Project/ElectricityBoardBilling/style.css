@@ -1,0 +1,110 @@
+﻿
+body {
+    background-color: #E6ECFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.body-content {
+    min-height: calc(100vh - 160px);
+    padding-top: 30px;
+}
+
+
+.app-footer {
+    height: 60px;
+    background-color: #212529;
+    color: #aaa;
+    text-align: center;
+    line-height: 60px;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+
+.billing-card {
+    width: 420px;
+    margin: 0 auto;
+    padding: 22px 24px;
+    border-radius: 8px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.card-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+
+.billing-table {
+    width: 100%;
+}
+
+    .billing-table td {
+        padding-bottom: 18px;
+        text-align: center;
+    }
+
+.form-label {
+    width: 80%;
+    margin: 0 auto 6px;
+    text-align: left;
+    font-weight: 500;
+    color: #333;
+}
+
+.input-box {
+    width: 80%;
+    height: 36px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.btn-submit {
+    padding: 10px 28px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+    .btn-submit:hover {
+        background-color: #0b5ed7;
+    }
+
+
+.error {
+    width: 80%;
+    margin: 4px auto 0;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+
+.result-label {
+    display: block;
+    margin-top: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.form-group {
+    width: 100%;
+    margin-bottom: 18px;
+    text-align: center;
+}

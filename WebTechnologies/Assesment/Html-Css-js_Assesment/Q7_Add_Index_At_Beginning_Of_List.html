@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Index to List Items</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #output {
+            list-style-type: none;
+            padding-left: 0;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>
+        Write a jQuery Code to add a tag at the beginning of the list item,
+        containing the index of the list item
+    </h2>
+
+
+    <ul id="items">
+        <li>CSHARP</li>
+        <li>SQL</li>
+        <li>ADO</li>
+    </ul>
+
+    <button id="addIndex">Add Index</button>
+
+
+    <ul id="output"></ul>
+
+    <script>
+        $("#addIndex").one("click", function () {
+            $("#items li").each(function (index) {
+                $("#output").append(
+                    "<li><strong>" + index + "</strong> " + $(this).text() + "</li>"
+                );
+            });
+        });
+    </script>
+
+</body>
+
+</html>

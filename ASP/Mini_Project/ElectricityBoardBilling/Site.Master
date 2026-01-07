@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="Site.Master.cs"
+    Inherits="ElectricityBoardBilling.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Electricity Board Billing System</title>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="style.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        function validateOnBlur(group) {
+            if (typeof (Page_ClientValidate) === 'function') {
+                Page_ClientValidate(group);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form runat="server">
+
+        <asp:ScriptManager runat="server" />
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" runat="server" href="~/Default.aspx">⚡ EB Billing
+                </a>
+
+                <ul class="navbar-nav me-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="~/Default.aspx">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="~/AddElectricityBill.aspx">Add Bill</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="~/ViewLastNBills.aspx">View Bills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="~/ViewBillsByConsumer">View BillsByConsumerNum</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <asp:LinkButton ID="btnLogout"
+                            runat="server"
+                            CssClass="nav-link text-warning fw-semibold"
+                            OnClick="btnLogout_Click">
+    Logout
+                        </asp:LinkButton>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+
+
+        <footer class="app-footer">
+            <p>&copy; <%: DateTime.Now.Year %> Electricity Board Billing System</p>
+        </footer>
+
+    </form>
+</body>
+</html>

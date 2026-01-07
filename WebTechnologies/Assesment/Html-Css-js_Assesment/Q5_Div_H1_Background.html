@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Child H1 Background</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #content {
+            border: 2px solid #ccc;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>
+        Find all h1 elements that are children of a div element and apply
+        a background to them.
+    </h2>
+
+    <div id="content">
+        <h1>Heading 1</h1>
+        <h1>Heading 2</h1>
+        <h1>Heading 3</h1>
+        <h1>Heading 4</h1>
+
+    </div>
+
+    <h1>Outside Div Heading</h1>
+
+    <br>
+    <button id="applybtn">Apply Background</button>
+
+    <script>
+        $("#applybtn").click(function () {
+            $("#content > h1").css("background-color", "blue");
+        });
+    </script>
+</body>
+
+</html>

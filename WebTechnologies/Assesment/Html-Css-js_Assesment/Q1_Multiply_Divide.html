@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiply and Divide</title>
+    
+</head>
+<body>
+    <h3>JavaScript Calculator</h3>
+
+    <label>1st Number :</label>
+    <input type="number" id="num1">
+    <br><br>
+    <label>2nd Number :</label>
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+
+    <p><strong>The Result Is :</strong></p>
+    <p ><strong id="result"></strong></p>
+    <script>
+    function multiply()
+    {
+        let a = document.getElementById("num1").value;
+        let b = document.getElementById("num2").value;
+        document.getElementById("result").innerHTML = a * b;
+    }
+    function divide()
+    {
+        let a = document.getElementById("num1").value;
+        let b = document.getElementById("num2").value;
+        document.getElementById("result").innerHTML = a / b;
+    }
+</script>
+</body>
+</html>

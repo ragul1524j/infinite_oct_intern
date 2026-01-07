@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Paragraph on Input Change</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <h2>
+        Append a &lt;p&gt; element with a text message when an &lt;input&gt; field is changed
+    </h2>
+
+    <input type="text" id="userInput" placeholder="Type here">
+    <br><br>
+    <div id="output">
+
+    </div>
+    <script>
+        $("#userInput").change(function () {
+            var value = $(this).val();
+            $("#output").append("<p>Input field value has changed : " + "<strong>" + value + "</strong>" + "</p>");
+        });
+    </script>
+</body>
+
+</html>
