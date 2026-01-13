@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MoviesMvcCodeFirst.Models.Movie>
+
+<h2 class="text-center text-primary mb-4">Movies By Director</h2>
+
+<div class="d-flex justify-content-center">
+    <table class="table table-bordered w-75 shadow-sm">
+        <thead class="bg-primary text-center text-white">
+            <tr>
+                <th>Movie Name</th>
+                <th>Release Date</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            @foreach (var m in Model)
+            {
+                <tr>
+                    <td>@m.MovieName</td>
+                    <td>@m.DateOfRelease.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

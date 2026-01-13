@@ -1,0 +1,49 @@
+﻿@model NorthwindDBFirst_prj.Models.Customer
+
+<h2 class="text-center text-primary mb-4">
+    Customer Details Based on Order ID
+</h2>
+
+<div class="d-flex justify-content-center">
+    @if (Model != null)
+    {
+        <table class="table table-bordered table-striped w-50 shadow-sm">
+            <thead class="table-dark">
+                <tr>
+                    <th colspan="2" class="text-center">
+                        Customer Information
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>Customer ID</th>
+                    <td>@Model.CustomerID</td>
+                </tr>
+                <tr>
+                    <th>Company Name</th>
+                    <td>@Model.CompanyName</td>
+                </tr>
+                <tr>
+                    <th>Contact Name</th>
+                    <td>@Model.ContactName</td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td>@Model.City</td>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <td>@Model.Country</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p class="text-danger fw-bold">
+            No customer found for the given Order ID.
+        </p>
+    }
+</div>

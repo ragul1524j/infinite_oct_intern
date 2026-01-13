@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MoviesMvcCodeFirst.Models.Movie>
+
+<h2 class="text-center text-primary mb-4">Movies List</h2>
+
+<div class="text-center mb-3">
+    <a href="@Url.Action("Create")" class="btn btn-primary">
+        Create Movie
+    </a>
+</div>
+
+<div class="d-flex justify-content-center">
+    <table class="table table-bordered table-striped w-75 shadow-sm">
+        <thead class="bg-primary text-center text-white">
+            <tr>
+                <th>Movie Name</th>
+                <th>Director</th>
+                <th>Release Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            @foreach (var m in Model)
+            {
+                <tr>
+                    <td>@m.MovieName</td>
+                    <td>@m.DirectorName</td>
+                    <td>@m.DateOfRelease.ToShortDateString()</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = m.Mid }, new { @class = "text-primary fw-bold" })
+                        |
+                        @Html.ActionLink("Delete", "Delete", new { id = m.Mid }, new { @class = "text-danger fw-bold" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
